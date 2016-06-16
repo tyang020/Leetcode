@@ -9,12 +9,12 @@
  */
 public class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> res = ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;
-        Queue<TreeNode> q = LinkedList<>();
+        Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         while (!q.isEmpty()) {
-            List<Integer> curLevel = ArrayList<>();
+            List<Integer> curLevel = new ArrayList<>();
             int size = q.size();
             for (int i = 0; i < size(); i++) {
                 root = q.poll();
