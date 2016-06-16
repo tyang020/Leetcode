@@ -17,6 +17,7 @@ public class Solution {
         if (root == null) return;
         if (res.size() <= level)
             res.add(new ArrayList<>());
+        //Add element to an existing list:
         res.get(level).add(root.val);
         searchDfs(root.left, res, level + 1);
         searchDfs(root.right, res, level + 1);
