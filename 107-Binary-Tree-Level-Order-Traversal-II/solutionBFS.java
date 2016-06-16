@@ -10,24 +10,15 @@
 public class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        if (root == null) return res;
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
-        while (!q.isEmpty()) {
-            List<Integer> curLevel = new ArrayList<>();
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
-                root = q.poll();
-                if (root != null) {
-                    curLevel.add(root.val);
-                }
-                if (root.left != null) 
-                    q.add(root.left);
-                if (root.right != null)
-                    q.add(root.right);
-            }
-            res.add(0,curLevel);
-        }
+        searchDfs(root, res, 0);
         return res;
+    }
+    public static void searchDfs(TreeNode root, List<List<Integer>> res, int level) {
+        if (root == null) return;
+        if (res.size() <= level)
+            res.add(0, new ArrayList<>());
+        res.get(res.size()-level-1).add(root.val);
+        searchDfs(root.left, res, level + 1);
+        searchDfs(root.right, res, level + 1);
     }
 }
