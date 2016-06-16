@@ -16,13 +16,15 @@ public class Solution {
         while (!q.isEmpty()) {
             List<Integer> curLevel = new ArrayList<>();
             int size = q.size();
-            for (int i = 0; i < size(); i++) {
+            for (int i = 0; i < size; i++) {
                 root = q.poll();
                 if (root != null) {
                     curLevel.add(root.val);
-                    q.add(root.left);
-                    q.add(root.right);
                 }
+                if (root.left != null) 
+                    q.add(root.left);
+                if (root.right != null)
+                    q.add(root.right);
             }
             res.add(0,curLevel);
         }
