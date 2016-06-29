@@ -5,7 +5,7 @@ public class Solution {
         //nums[i]: new array without duplicates
         for(int n : nums) {
             if (i < 1 || n > nums[i - 1]) {
-                num[i] = n;
+                nums[i++] = n;
             }
         }
         return i;
