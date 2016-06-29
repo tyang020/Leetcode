@@ -2,6 +2,7 @@ public class Solution {
     public int myAtoi(String str) {
         if(str == null || str.length() < 1) return 0;
         int i = 0;
+        // double instead of long;
         double res = 0;
         char sign = '+';
         //remove all whitespace
