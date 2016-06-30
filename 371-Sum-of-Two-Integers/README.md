@@ -1,0 +1,1 @@
+a^b is the sum of a and b bitwise without carrier, (a&b)<<1 is the carrier computation bitwise, when the carrier is equal to 0, the recursion terminate, the code is much like Euclidean gcd:
