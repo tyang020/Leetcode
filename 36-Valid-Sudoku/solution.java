@@ -1,25 +1,37 @@
 public class Solution {
     public boolean isValidSudoku(char[][] board) {
-        for(int i = 0; i < char.length; i++) {
-            for(int j = 0; j < char[i].length; j++) {
-                if ()
+        //row check
+        for(int i = 0; i < 9; i++) {
+            boolean[] map = new boolean[9]; // initialize with false
+            for(int j = 0; j < 9; j++) {
+                if (board[i][j] == '.') continue;
+                if (map[(int)board[i][j] - '1']) 
+                    return false;
+                map[(int)board[i][j] - '1'] = true;
             }
         }
-    }
-    public boolean isValid(char[][] board, int row, int col) {
-        for (int i = row + 1; i < 9; i++){
-            if (char[row][i] == '.') continue;
-            if (char[row][col] == char[i][col])
-                return false;
-        }
-        for (int i = col + 1; i < 9; i++) {
-            if (char[row][i] == '.') continue;
-            if (char[row][col] == char[row][i]){
-                return false;
+        //column check
+        for (int j = 0; j < 9; j++) {
+            boolean[] map = new boolean[9];
+            for (int i = 0; i < 9; i++) {
+                if (board[i][j] == '.') continue;
+                if (map[(int)board[i][j]-'1'])
+                    return false;
+                map[(int)board[i][j]-'1'] = true;
             }
         }
-        for (int i = row, j; i < (row/3+1)*3; i++) {
-            for ()
+        //check each subbox
+        for (int block = 0; block < 9; block++) {
+            boolean[] map = new boolean[9];
+            for (int i = block/3*3; i < block/3*3 + 3; i++) {
+                for (int j = block%3*3; j < block%3*3+3; j++) {
+                    if (board[i][j] == '.') continue;
+                    if (map[(int)board[i][j]-'1'])
+                        return false;
+                    map[(int)board[i][j]-'1'] = true; 
+                }
+            }
         }
+        return true;
     }
 }
