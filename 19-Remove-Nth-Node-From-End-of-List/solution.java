@@ -8,7 +8,7 @@
  */
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        if (head == null) return null;
+        //if (head == null) return null;
         ListNode dummy = new ListNode(0), p = head;
         dummy.next = head;
         int len = 0;
