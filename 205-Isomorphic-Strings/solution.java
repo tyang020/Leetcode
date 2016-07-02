@@ -9,7 +9,7 @@ public class Solution {
             if (s_to_t[s.charAt(i)] == 0 && t_to_s[t.charAt(i)] == 0) {
                 s_to_t[s.charAt(i)] = t.charAt(i);
                 t_to_s[t.charAt(i)] = s.charAt(i);
-            } else if (s_to_t[s.charAt(i) - 'a'] != t.charAt(i) || t_to_s[t.charAt(i)] != s.charAt(i))
+            } else if (s_to_t[s.charAt(i)] != t.charAt(i) || t_to_s[t.charAt(i)] != s.charAt(i))
                 return false;
         }
         return true;
