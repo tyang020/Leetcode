@@ -18,9 +18,11 @@ public class Solution {
         }
         int i = -1;
         p = dummy;
+        //find the nth node form the end
         while (len - n - 1 != i++) {
             p = p.next;
         }
+        //remove that node
         p.next = p.next.next;
         return dummy.next;
     }
