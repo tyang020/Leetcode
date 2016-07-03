@@ -1,0 +1,1 @@
+solution_v1 gives a solution without using any other functions
