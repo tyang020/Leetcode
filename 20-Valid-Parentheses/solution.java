@@ -5,9 +5,9 @@ public class Solution {
         for (char c : s.toCharArray()) {
             if (c == '(' || c == '[' || c == '{')
                 stack.push(c);
-            else if (Math.abs(c - stack.pop()) > 2)
+            else if (stack.empty() || Math.abs(c - stack.pop()) > 2)
                 return false;
         }
-        return true;
+        return stack.empty();
     }
 }
