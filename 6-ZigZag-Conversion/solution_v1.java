@@ -8,7 +8,7 @@ public class Solution {
             for (int j = 0; j < numRows && i < s.length(); j++) 
                 sbs[j].append(s.charAt(i++));
             for (int j = numRows - 2; j > 0 && i < s.length(); j--)
-                sbs[j] = append(s.charAt(i++));
+                sbs[j].append(s.charAt(i++));
         }
         for (int i = 1; i < numRows; i++) 
             sbs[0].append(sbs[i]);
