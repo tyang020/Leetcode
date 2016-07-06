@@ -1,7 +1,7 @@
 public class Solution {
     public String convert(String s, int numRows) {
         if (s.length() == 0 || numRows == 0) return "";
-        if (numRows == 1) return s;
+        if (numRows == 1 || s.length() == 1) return s;
         StringBuilder[] sbs = new StringBuilder[numRows];
         for (int i = 0; i < s.length(); i++) {
             int mod = i % (numRows * 2 - 2);
