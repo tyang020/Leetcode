@@ -10,8 +10,8 @@ public class Solution {
             for (int j = numRows - 2; j > 0 && i < s.length(); j--)
                 sbs[j].append(s.charAt(i++));
         }
-        for (int i = 1; i < numRows; i++) 
-            sbs[0].append(sbs[i]);
+        for (int j = 1; j < numRows; j++) 
+            sbs[0].append(sbs[j]);
         return sbs[0].toString();
     }
 }
