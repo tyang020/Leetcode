@@ -1,4 +1,5 @@
 public class MinStack {
+    /** Save the difference between number and min instead of save the original number */
     private double min;
     private Stack<Double> stack;
 
