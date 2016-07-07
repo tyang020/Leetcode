@@ -5,8 +5,10 @@ public class Solution {
             int count = 0;
             int n = i;
             while (n != 0) {
-                count += n % 2;
-                n = n / 2;
+                //count += n % 2;
+                //n = n / 2;
+                count++;
+                n = n&(n-1); //flip the least significant 1-bit to 0;
             }
             res[i] = count;
         }
