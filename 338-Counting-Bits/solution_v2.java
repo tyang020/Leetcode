@@ -7,7 +7,7 @@ public class Solution {
         for (int i = 1; i <= num; i++) {
             if (i == pow) {
                 res[i] = 1;
-                pow << = 1;
+                pow <<= 1;
                 p = 1;
             } else {
                 res[i] = res[p] + 1; //res(1100) = res(100) + 1
