@@ -6,3 +6,13 @@ For 'ones', we can get 'ones = ones ^ A[i]; if (twos == 1) then ones = 0', that 
 
 Similarly, for 'twos', we can get 'twos = twos ^ A[i]; if (ones* == 1) then twos = 0' and 'twos = (twos ^ A[i]) & ~ones'. Notice that 'ones*' is the value of 'ones' after calculation, that is why twos is
 calculated later.
+
+twos = a; ones = b
+current   incoming  next
+a b            c    a b
+0 0            0    0 0
+0 1            0    0 1
+1 0            0    1 0
+0 0            1    0 1
+0 1            1    1 0
+1 0            1    0 0
