@@ -21,8 +21,7 @@ public class Solution {
          */
          if (n == 0) return 1;
          int res = 10, curRes = 9;
-         int i = 2;
-         for (int i = 2; i < n && i <= 10; i++) {
+         for (int i = 2; i <= n && i <= 10; i++) {
              curRes *= 10 - i + 1;
              res += curRes;
          }
