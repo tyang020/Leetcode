@@ -15,7 +15,7 @@ public class Solution {
         return root;
     }
     public void helper (TreeNode root, int[] nums, int start, int end) {
-        if (start < end) return;
+        if (start > end) return;
         int mid = start + (end - start) / 2;
         root.val = nums[mid];
         
