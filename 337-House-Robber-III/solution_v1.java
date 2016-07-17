@@ -9,7 +9,7 @@
  */
 public class Solution {
     public int rob(TreeNode root) {
-        /** Using a map to record the results of each node */
+        /** Using a map to record the results of each node 9ms*/
         Map<TreeNode, Integer> map = new HashMap();
         return robSub(root, map);
     }
