@@ -1,10 +1,11 @@
 public class Solution {
     /** The idea is similar to unique BST: the operator will divide the input to 2 parts and compute those seperately.
-     *  Without map: 9ms; with map 11ms;
+     *  Without map: 9ms; with map 3ms & 11ms;
      */
     private Map<String, List<Integer>> map = new HashMap();
     
     public List<Integer> diffWaysToCompute(String input) {
+        //3ms
         if (map.containsKey(input))
             return map.get(input);
             
@@ -19,7 +20,7 @@ public class Solution {
             // Without map:
             List<Integer> n1 = diffWaysToCompute(s1);
             List<Integer> n2 = diffWaysToCompute(s2);
-            
+            // 11ms
             //List<Integer> n1 = map.getOrDefault(s1, diffWaysToCompute(s1));
             //List<Integer> n2 = map.getOrDefault(s2, diffWaysToCompute(s2));
             for (Integer c1 : n1) {
