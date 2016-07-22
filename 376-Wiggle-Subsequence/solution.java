@@ -3,7 +3,7 @@ public class Solution {
         if (nums.length < 2) return nums.length;
         int diff = nums[1] - nums[0], count = 2;
         int i = 1;
-        while (diff == 0) {
+        while (diff == 0 && i < nums.length) {
             i++;
             count = 1;
         }
