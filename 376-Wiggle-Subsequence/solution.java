@@ -7,7 +7,7 @@ public class Solution {
             i++;
             count = 1;
         }
-        for (i ; i < nums.length; i++) {
+        for ( ; i < nums.length; i++) {
             if (diff == 0) continue;
             if ((nums[i] - nums[i-1]) * diff < 0) {
                 count++;
