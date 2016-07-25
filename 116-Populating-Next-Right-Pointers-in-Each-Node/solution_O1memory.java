@@ -12,7 +12,7 @@ public class Solution {
         while(level_start != null) {
             //record the first node of each level
             cur = level_start;
-            while(cur != null) {
+            while(cur.left != null) {
                 cur.left.next = cur.right;
                 if (cur.next != null)
                     cur.right = cur.next.left;
