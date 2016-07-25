@@ -9,10 +9,12 @@
  */
 public class Solution {
     public List<Integer> rightSideView(TreeNode root) {
-        
+        List<Integer> res= new ArrayList();
+        rightView(root, res, 0);
+        return res;
     }
-    
-    private void rightView(TreeNode cur, List<Integr> res, int depth) {
+    //dfs:cur->right->left
+    private void rightView(TreeNode cur, List<Integer> res, int depth) {
         if (cur == null) 
             return;
         if (res.size() == depth)
