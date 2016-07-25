@@ -12,10 +12,10 @@ public class Solution {
         while(level_start != null && level_start.left != null) {
             //record the first node of each level
             TreeLinkNode cur = level_start;
-            while(cur.left != null) {
+            while(cur != null && cur.left != null) {
                 cur.left.next = cur.right;
                 if (cur.next != null)
-                    cur.right = cur.next.left;
+                    cur.right.next = cur.next.left;
                 cur = cur.next;
             }
             
