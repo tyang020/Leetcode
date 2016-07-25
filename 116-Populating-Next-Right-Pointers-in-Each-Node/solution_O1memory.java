@@ -8,10 +8,10 @@
  */
 public class Solution {
     public void connect(TreeLinkNode root) {
-        TreeLinkNode level_start = root, cur;
+        TreeLinkNode level_start = root;
         while(level_start != null && level_start.left != null) {
             //record the first node of each level
-            cur = level_start;
+            TreeLinkNode cur = level_start;
             while(cur.left != null) {
                 cur.left.next = cur.right;
                 if (cur.next != null)
