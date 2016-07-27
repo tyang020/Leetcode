@@ -32,16 +32,16 @@ public class Solution {
     
     //Convert List to BST
     private TreeNode helper(ListNode head, int n) {
-        if (n < 0) return null;
-        int i = 1;
+        if (n < 0 || head == null) return null;
+        int i = 0;
         ListNode p = head;
-        while (i <= n / 2) {
+        while (i < n / 2) {
             p = p.next;
             i++;
         }
         TreeNode node = new TreeNode(p.val);
-        node.left = helper(head, n/2-1);
-        node.right = helper(p.next, (n-n/2) - 1);
+        node.left = helper(head, n/2);
+        node.right = helper(p.next, n - n/2 - 1);
         return node;
     }
 }
