@@ -32,7 +32,7 @@ public class Solution {
     
     //Convert List to BST
     private TreeNode helper(ListNode head, int n) {
-        if (n < 0 || head == null) return null;
+        if (n <= 0 || head == null) return null;
         int i = 0;
         ListNode p = head;
         while (i < n / 2) {
