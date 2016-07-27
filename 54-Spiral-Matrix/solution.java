@@ -31,7 +31,7 @@ public class Solution {
             /* Traverse up */
             if (col_start <= col_end) {
                 for (int i = row_end; i >= row_start; i--) {
-                    res.add(matrix[col_start][i]);
+                    res.add(matrix[i][col_start]);
                 }
                 col_start++;
             }
