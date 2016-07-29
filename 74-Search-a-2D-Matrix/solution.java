@@ -15,7 +15,7 @@ public class Solution {
             else if (num < target)
                 low = mid + 1;
             else
-                high = mid;
+                high = mid + 1;
         }
         
         return false;
