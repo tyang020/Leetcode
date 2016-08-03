@@ -27,15 +27,10 @@ public class Solution {
         // Store all the nums which are larger than pivot to the left
         // Check from the tail of the array, if it is larger than pivot, move it to left
         while (l <= r) {
-            if (nums[l] < pivot && nums[r] > pivot)
-                swap(nums, l++, r--);
-            if (nums[l] >= pivot) l++; 
-            if (nums[r] <= pivot) r--;
-            /*if (nums[r] > pivot)
+            if (nums[r] > pivot)
                 swap(nums, l++, r);
             else
                 r--;
-            */
         }
         swap(nums, left, r);
         return r;
