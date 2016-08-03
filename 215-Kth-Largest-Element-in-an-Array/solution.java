@@ -28,7 +28,7 @@ public class Solution {
         // Check from the tail of the array, if it is larger than pivot, move it to left
         while (l <= r) {
             if (nums[l] < pivot && nums[r] > pivot)
-                swap(nums[l++], nums[r--]);
+                swap(nums, l++, r--);
             if (nums[l] >= pivot) l++; 
             if (nums[r] <= pivot) r--;
             /*if (nums[r] > pivot)
