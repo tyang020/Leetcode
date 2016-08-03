@@ -18,6 +18,7 @@ public class Solution {
         nums[i] = nums[j];
         nums[j] = temp;
     }
+    
     // This function partition the nums into two parts:
     // Return the postion of pivot, and all the left number of pivot is larger than pivot, whereas all the right nums of pivot is smaller or equal to pivot
     private int partition(int[] nums, int left, int right) {
@@ -26,10 +27,15 @@ public class Solution {
         // Store all the nums which are larger than pivot to the left
         // Check from the tail of the array, if it is larger than pivot, move it to left
         while (l <= r) {
-            if (nums[r] > pivot)
+            if (nums[l] < pivot && nums[r] > pivot)
+                swap(nums[l++], nums[r--]);
+            if (nums[l] >= pivot) l++; 
+            if (nums[r] <= pivot) r--;
+            /*if (nums[r] > pivot)
                 swap(nums, l++, r);
             else
                 r--;
+            */
         }
         swap(nums, left, r);
         return r;
