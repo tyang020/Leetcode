@@ -15,7 +15,7 @@ public class Solution {
          */
          
          int left = 0, right = nums.length - 1;
-         while (left <= right) {
+         while (left < right) {
             if (left + 1 == right) 
                 return nums[left] > nums[right] ? left : right;
                 
@@ -25,7 +25,7 @@ public class Solution {
             if (nums[mid] < nums[mid + 1])
                 left = mid + 1;
             else if (nums[mid] < nums[mid - 1]) 
-                right = mid - 1;
+                right = mid;
          }
          return left;
     }
