@@ -35,7 +35,7 @@ public class NestedIterator implements Iterator<Integer> {
                 return curr.getInteger();
             pushStack(curr.getList());
         }
-        return;
+        return stack.pop();
     }
 
     @Override
