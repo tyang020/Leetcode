@@ -29,18 +29,19 @@ public class NestedIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        while (!stack.isEmpty()) {
-            NestedInteger curr = stack.pop();
-            if (curr.isInteger())
-                return curr.getInteger();
-            pushStack(curr.getList());
-        }
         return stack.pop().getInteger();
     }
 
     @Override
     public boolean hasNext() {
-        return !stack.isEmpty();
+        while (!stack.isEmpty()) {
+            NestedInteger curr = stack.peek();
+            if (curr.isInteger())
+                return true;
+            stack.pop();
+            pushStack(curr.getList());
+        }
+        return false;
     }
 }
 
