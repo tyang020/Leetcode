@@ -29,7 +29,7 @@ public class NestedIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        while (true) {
+        while (!Stack.isEmpty()) {
             NestedInteger curr = stack.pop();
             if (curr.isInteger())
                 return curr.getInteger();
