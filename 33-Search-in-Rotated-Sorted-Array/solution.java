@@ -8,14 +8,14 @@ public class Solution {
             
             // Normal sorted array before mid:
             if (nums[low] <= nums[mid]) {
-                if (target > nums[mid] || target < nums[low])
+                if (target > nums[mid] || target < nums[low])// target not in the sorted part
                     low = mid + 1;
                 else
                     high = mid;
             }
             // Normal sorted array after mid:
             else {
-                if (target > nums[mid] && target <= nums[high])
+                if (target > nums[mid] && target <= nums[high]) //target in the sorted part
                     low = mid + 1;
                 else
                     high = mid;
