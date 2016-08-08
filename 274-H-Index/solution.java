@@ -7,7 +7,8 @@ public class Solution {
         for (int n : citations) {
             if (n >= length)
                 sortedCit[length]++;
-            sortedCit[n]++;
+            else
+                sortedCit[n]++;
         }
         
         // From the end to the start, add these values, the sum would be the number of papers which have more than i(index) citations.
