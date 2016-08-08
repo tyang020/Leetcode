@@ -21,6 +21,7 @@ public class Solution {
                     high = mid;
             }
         }
+        
         return nums[low] == target ? low : -1;
     }
 }
