@@ -18,7 +18,7 @@ public class Solution {
                 else
                     high = mid;
             } else {
-                low++;
+                low++;  // when there are duplicates, we need to traverse all the elements in nums array.
             }
         }
         
