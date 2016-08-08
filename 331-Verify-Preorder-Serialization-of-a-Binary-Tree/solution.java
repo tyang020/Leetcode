@@ -1,17 +1,15 @@
 public class Solution {
     public boolean isValidSerialization(String preorder) {
-        // Using stack to save the nodes which have not finished traversal.
-        Stack<String> stack = new Stack<String>();
+        // Each non-null node has two outdegree and one indegree(2 children and 1 parent), except root.
+        // Traverse each node, abstract 1 indegree, if it is not null, add 2 outdegree; The sum of indegree should be equal to the sum of outdegree
         String[] str = preorder.split(",");
+        int degree = 1;
         for (String s : str) {
-            while (!stack.isEmpty() && s.equals("#") && stack.peek().equals("#")) {
-                stack.pop();   // Remove #
-                if (stack.isEmpty())
-                    return false;
-                stack.pop();   // Remove number before "#". After removing the number, it might be a "#" in the top, so we should check again;
-            }
-            stack.push(s);
+            if (--degree < 0)
+                return false; // indegree
+            if(!s.equals("#"))
+                degree += 2; //outdegree
         }
-        return stack.size() == 1 && stack.pop().equals("#");
+        return degree == 0;
     }
 }
