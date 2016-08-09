@@ -20,6 +20,7 @@ public class Solution {
                 curr.right = curr.left;
                 curr.left = null;
             }
+            curr = curr.right;
         }
     }
 }
