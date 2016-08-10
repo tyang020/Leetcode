@@ -30,6 +30,6 @@ Given two numbers represented as strings, return multiplication of the numbers a
 
 <div>
 
-<div id="similar" class="btn btn-xs btn-warning">Hide Similar Problems</div>
+<div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton" style="display: inline;">[(M) Add Two Numbers](/problems/add-two-numbers/) [(E) Plus One](/problems/plus-one/) [(E) Add Binary](/problems/add-binary/)</span></div>
+<span class="hidebutton">[(M) Add Two Numbers](/problems/add-two-numbers/) [(E) Plus One](/problems/plus-one/) [(E) Add Binary](/problems/add-binary/)</span></div>
