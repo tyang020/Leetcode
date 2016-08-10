@@ -17,12 +17,12 @@ Can you solve it without using extra space?
 
 <div>
 
-<div id="tags" class="btn btn-xs btn-warning">Hide Tags</div>
+<div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton" style="display: inline;">[Linked List](/tag/linked-list/) [Two Pointers](/tag/two-pointers/)</span></div>
+<span class="hidebutton">[Linked List](/tag/linked-list/) [Two Pointers](/tag/two-pointers/)</span></div>
 
 <div>
 
-<div id="similar" class="btn btn-xs btn-warning">Hide Similar Problems</div>
+<div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton" style="display: inline;">[(E) Linked List Cycle](/problems/linked-list-cycle/) [(H) Find the Duplicate Number](/problems/find-the-duplicate-number/)</span></div>
+<span class="hidebutton">[(E) Linked List Cycle](/problems/linked-list-cycle/) [(H) Find the Duplicate Number](/problems/find-the-duplicate-number/)</span></div>
