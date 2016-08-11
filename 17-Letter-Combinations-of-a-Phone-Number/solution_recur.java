@@ -7,12 +7,12 @@ public class Solution {
         if (digits.isEmpty())
             return res;
         
-        StringBuilder str = new StringBuilder();
+        String str = new String();
         helperDfs(res, str, 0, digits);
         return res;
     }
     
-    public void helperDfs(List<String> res, StringBuilder str, int pos, String digits) {
+    public void helperDfs(List<String> res, String str, int pos, String digits) {
         if (pos >= digits.length()) {
             res.add(str.toString());
             return;
@@ -20,9 +20,9 @@ public class Solution {
         
         String letters = map[digits.charAt(pos)-'0'];
         for (char c : letters.toCharArray()) {
-            str.append(c);
-            helperDfs(res, str, pos + 1, digits);
-            str.deleteCharAt(str.length()-1);
+            //str.append(c);
+            helperDfs(res, str+c, pos + 1, digits);
+            //str.deleteCharAt(str.length()-1);
         }
         
     }
