@@ -8,14 +8,14 @@ public class Solution {
     }
     
     public void helper(List<List<Integer>> res, List<Integer> list, int n, int k, int start) {
-        if (list.size() == k) {
+        if (k == 0) {
             res.add(new ArrayList(list));
             return;
         }
         
-        for (int i = start; i <= n; i++) {
+        for (int i = start; i <= n-k+1; i++) {
             list.add(i);
-            helper(res, list, n, k, i+1);
+            helper(res, list, n, k - 1, i+1);
             list.remove(list.size()-1);
         }
     }
