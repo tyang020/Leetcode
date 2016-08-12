@@ -18,14 +18,14 @@ public class Solution {
         
         // Search for end
         hi = nums.length - 1;
-        while (lo < hi) {
+        while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             if (target < nums[mid])
                 hi = mid - 1;
             else
-                lo = mid;
+                lo = mid+1;
         }
-        res[1] = lo;
+        res[1] = hi;
         return res;
     }
 }
