@@ -30,8 +30,8 @@ public class Solution {
                 break;
             }
         }
-        root.left = helper(preorder, inorder, in_start, in_end-1, pre_root+1);
-        root.right = helper(preorder, inorder, in_start+1, in_end, pre_root+in_root-in_start+1);
+        root.left = helper(preorder, inorder, in_start, in_root-1, pre_root+1);
+        root.right = helper(preorder, inorder, in_root+1, in_end, pre_root+in_root-in_start+1);
         return root;
     }
 }
