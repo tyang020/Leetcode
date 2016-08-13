@@ -18,7 +18,7 @@ public class Solution {
         if (preorder.length == 0)
             return null;
         
-        int in_idx = 1, pre_idx = 0;
+        int in_idx = 0, pre_idx = 1;
         
         TreeNode top = null, root = new TreeNode(preorder[0]);
         Stack<TreeNode> stack = new Stack();
