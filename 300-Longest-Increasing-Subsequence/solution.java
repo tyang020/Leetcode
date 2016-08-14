@@ -10,19 +10,17 @@ public class Solution {
             return 0;
          int[] res = new int[nums.length];
          Arrays.fill(res, 1);
+         int length = 1;
          
          for (int i = 0; i < nums.length; i++) {
              for (int j = 0; j < i; j++) {
                  if (nums[j] < nums[i])
                     res[i] = Math.max(res[i], res[j]+1);
              }
+             if (res[i] > length)
+                length = res[i];
          }
          
-         int length = 1;
-         for (int n : res) {
-             if (n > length)
-                length = n;
-         }
          return length;
     }
 }
