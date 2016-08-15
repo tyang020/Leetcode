@@ -7,7 +7,7 @@ public class Solution {
             min_path_sum[i] = list.get(i);
         }
         for (int row = n - 2; row >= 0; row--) {
-            for (int j = 0; j <= row+1; j++){
+            for (int j = 0; j <= row; j++){
                 min_path_sum[j] = Math.min(min_path_sum[j], min_path_sum[j+1]) + triangle.get(row).get(j);
             }
         }
