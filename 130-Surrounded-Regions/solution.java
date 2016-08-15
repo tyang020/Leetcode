@@ -35,12 +35,17 @@ public class Solution {
     }
     
     private void border(char[][] board, int i, int j, int m, int n) {
-        if (i < 0 || j < 0 || i >=m || j >= n || board[i][j] != 'O')
+        if (board[i][j] != 'O')
             return;
         board[i][j] = 'V';
-        border(board, i-1, j, m, n);
-        border(board, i+1, j, m, n);
-        border(board, i, j-1, m, n);
-        border(board, i, j+1, m, n);
+        // When neighbors are not on the border
+        if (i-1 > 0)
+            border(board, i-1, j, m, n);
+        if (i+1 < m-1)
+            border(board, i+1, j, m, n);
+        if (j-1 > 0)
+            border(board, i, j-1, m, n);
+        if (j+1 < n-1)
+            border(board, i, j+1, m, n);
     }
 }
