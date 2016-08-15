@@ -35,7 +35,7 @@ public class Solution {
     }
     
     private void border(char[][] board, int i, int j, int m, int n) {
-        if (i < 0 || j < 0 || i >=m || j >= n || board[i][j] == 'X')
+        if (i < 0 || j < 0 || i >=m || j >= n || board[i][j] != 'O')
             return;
         board[i][j] = 'V';
         border(board, i-1, j, m, n);
