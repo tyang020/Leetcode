@@ -38,7 +38,7 @@ public class Solution {
         if (board[i][j] != 'O')
             return;
         board[i][j] = 'V';
-        // When neighbors are not on the border
+        // When neighbors are not on the border. Got runtime error when there are no conditions.
         if (i-1 > 0)
             border(board, i-1, j, m, n);
         if (i+1 < m-1)
