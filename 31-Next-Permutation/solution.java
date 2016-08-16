@@ -4,7 +4,7 @@ public class Solution {
         // 1. find 3 at index 3
         // 2. swap 3 at index 3 with 5 at index 6;
         // 3. reverse 86332 to 23386
-        int i = 0, n = nums.length;
+        int i = -1, n = nums.length;
         if (n < 2)
             return;
         
@@ -42,7 +42,7 @@ public class Solution {
     
     private void reverseSort(int[] nums, int start, int end) {
         for (int i = start; i <= start+(end-start)/2; i++) {
-            swap(nums, i, end-start+i);
+            swap(nums, i, end+start-i);
         }
     }
 }
