@@ -1,12 +1,12 @@
 public class Solution {
     public String getPermutation(int n, int k) {
         StringBuilder sb = new StringBuilder();
-       
-        int factorial = 1, i = 1;
+        
+        int[] fact = new int[n+1];
+        fact[0] = 1;
         k--;
-        while(i < n) {
-            i++;
-            factorial *= i;
+        for (int i = 1; i <= n; i++) {
+            fact[i] = fact[i-1] * i;
         }
         
         
@@ -14,17 +14,14 @@ public class Solution {
         for (int j = 1; j <= n; j++) 
             list.add(j);
         
-        // Find the largest factorial which is smaller than k
-        factorial /= i--;
         
-        while (i > 0) {
-            int idx = k / factorial;
+        for (int i = 1; i <= n; i++) {
+            int idx = k / fact[n-i];
             sb.append(list.get(idx));
             list.remove(idx);
-            k %= factorial;
-            factorial /= i--;
+            // next k
+            k %= fact[n-i];
         }
-        sb.append(list.get(0));
         
         return sb.toString();
     }
