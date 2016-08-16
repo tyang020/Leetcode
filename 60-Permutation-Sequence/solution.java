@@ -5,8 +5,11 @@ public class Solution {
         int[] fact = new int[n+1];
         fact[0] = 1;
         k--;
+        // TLE without sum
+        int sum = 1;
         for (int i = 1; i <= n; i++) {
-            fact[i] = fact[i-1] * i;
+            sum *= i;
+            fact[i] = sum;
         }
         
         
