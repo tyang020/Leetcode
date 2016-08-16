@@ -4,7 +4,7 @@ public class Solution {
        
         int factorial = 1, i = 1;
         k--;
-        while(factorial < k) {
+        while(factorial <= k) {
             i++;
             factorial *= i;
         }
