@@ -15,16 +15,18 @@ public class Solution {
             list.add(j);
         
         // Find the largest factorial which is smaller than k
-        factorial /= i--;
         
-        while (i > 0) {
+        while (!list.isEmpty()) {
+            factorial /= i--;
             int idx = k / factorial;
             sb.append(list.get(idx));
             list.remove(idx);
             k %= factorial;
-            factorial /= i--;
+            while (k == 0 && !list.isEmpty()) {
+                sb.append(list.get(0));
+                list.remove(0);
+            }
         }
-        sb.append(list.get(0));
         
         return sb.toString();
     }
