@@ -5,10 +5,8 @@ public class Solution {
         int[] fact = new int[n+1];
         fact[0] = 1;
         k--;
-        int sum = 1;
         for (int i = 1; i <= n; i++) {
-            sum *= i;
-            fact[i] = sum;
+            fact[i] = fact[i-1] * i;
         }
         
         
