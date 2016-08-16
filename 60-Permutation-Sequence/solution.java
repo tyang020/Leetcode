@@ -25,7 +25,7 @@ public class Solution {
             int index = k/factorial[n-i];
             sb.append(String.valueOf(numbers.get(index)));
             numbers.remove(index);
-            k-=index*factorial[n-i];
+            k%=factorial[n-i];
         }
         
         return String.valueOf(sb);
