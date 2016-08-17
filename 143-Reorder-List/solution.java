@@ -29,7 +29,7 @@ public class Solution {
         }
         slow = head;
         fast = prev;
-        while (fast != null) {
+        while (slow.next != prev) {
             ListNode slow_next = slow.next;
             slow.next = fast;
             slow.next.next = slow_next;
