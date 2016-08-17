@@ -16,10 +16,9 @@ public class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
-        ListNode left = sortList(head);
-        ListNode right = sortList(slow.next);
+        ListNode right = slow.next;
         slow.next = null;
-        return merge(left, right);
+        return merge(sortList(head), sortList(right));
     }
     
     private ListNode merge(ListNode left, ListNode right) {
