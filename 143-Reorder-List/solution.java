@@ -21,6 +21,7 @@ public class Solution {
         
         // prev refer to the first node of reversed list
         ListNode prev = null, cur = slow.next;
+        slow.next = null;
         while(cur != null) {
             ListNode next = cur.next;
             cur.next = prev;
@@ -29,7 +30,7 @@ public class Solution {
         }
         slow = head;
         fast = prev;
-        while (slow.next != prev) {
+        while (fast != null) {
             ListNode slow_next = slow.next;
             slow.next = fast;
             slow.next.next = slow_next;
