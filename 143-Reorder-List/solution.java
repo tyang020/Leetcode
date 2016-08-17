@@ -31,13 +31,12 @@ public class Solution {
         slow = head;
         fast = prev;
         while (fast != null) {
-            ListNode slow_next = slow.next;
+            ListNode slow_next = slow.next, fast_next = fast.next;
             slow.next = fast;
-            slow.next.next = slow_next;
+            fast.next = slow_next;
             slow = slow_next;
-            fast = fast.next;
+            fast = fast_next;
         }
-        slow.next = fast;
         
     }
 }
