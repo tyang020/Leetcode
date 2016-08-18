@@ -48,10 +48,10 @@ Return a NestedInteger object containing a nested list with 2 elements:
 
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton" style="display: none;">[Stack](/tag/stack/) [String](/tag/string/)</span></div>
+<span class="hidebutton">[Stack](/tag/stack/) [String](/tag/string/)</span></div>
 
 <div>
 
-<div id="similar" class="btn btn-xs btn-warning">Hide Similar Problems</div>
+<div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton" style="display: inline;">[(M) Flatten Nested List Iterator](/problems/flatten-nested-list-iterator/)</span></div>
+<span class="hidebutton">[(M) Flatten Nested List Iterator](/problems/flatten-nested-list-iterator/)</span></div>
