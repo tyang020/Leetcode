@@ -32,6 +32,9 @@ public class Solution {
         // 1. If '[', add previous level of saved NestedInteger to stack and create a new level NestedInteger curr;
         // 2. If ',' or ']', it indicates the end of integer, add the recorded integer to curr;
         //    As for ']', it also indicates the end of NestedInteger at current level. We need to backtrack the previous level of NestedInteger popped from stack and add this curr to pop, then set curr to pop.
+        if (s.charAt(0) != '[')
+            return new NestedInteger(Integer.valueOf(s));
+        
         NestedInteger curr = null;
         Stack<NestedInteger> stack = new Stack<NestedInteger>();
         int l = 0;     // l keeps track of the start of an integer while r keeps track of the end.
