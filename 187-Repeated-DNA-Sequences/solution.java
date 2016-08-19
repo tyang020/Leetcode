@@ -4,7 +4,7 @@ public class Solution {
         Set<Integer> set = new HashSet();
         Set<String> res = new HashSet();
         int seq = 0;   // each letter uses 3 bit of seq and total is 30 bit which is smaller than 32
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 9 && i < s.length(); i++)
             seq = (seq << 3) | (s.charAt(i) & 7);
         for (int i = 9; i < s.length(); i++) {
             seq = (seq << 3 & 0x3FFFFFFF) | (s.charAt(i) & 7);
