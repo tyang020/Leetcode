@@ -11,7 +11,7 @@ public class Solution {
         for (int i = 0; i < k && !pq.isEmpty(); i++) {
             Pair p = pq.poll();
             res.add(new int[]{p.n1, p.n2});
-            if (i == nums1.length - 1) continue;
+            if (p.idx == nums1.length - 1) continue;
             pq.offer(new Pair(p.idx+1, nums1[p.idx+1], p.n2));
         }
         return res;
