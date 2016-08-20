@@ -20,7 +20,8 @@ public class Solution {
     private boolean hasCycle(int course, List<Integer>[] adj, boolean[] visited, boolean[] recStack) {
         if (recStack[course])   // when course in recursion stack, it must have been visited
             return true;
-        else if (visited[course])
+        else if (visited[course]) // when course isn't in stack but has been visited, this means there is not cycle starting from course.
+                                  // Otherwise, the previous function will return true and we cannot get to this step.
             return false;
         
         // when not visited and not in recursion stack:
