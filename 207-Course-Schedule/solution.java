@@ -11,8 +11,9 @@ public class Solution {
             
         boolean[] visited = new boolean[numCourses], recStack = new boolean[numCourses];
         for (int i = 0; i < numCourses; i++)
-            if (hasCycle(i, adj, visited, recStack))
-                return false;
+            if (!visited[i])
+                if (hasCycle(i, adj, visited, recStack))
+                    return false;
         return true;
     }
     
@@ -20,8 +21,8 @@ public class Solution {
     private boolean hasCycle(int course, List<Integer>[] adj, boolean[] visited, boolean[] recStack) {
         if (recStack[course])   // when course in recursion stack, it must have been visited
             return true;
-        else if (visited[course])
-            return false;
+        //else if (visited[course])
+        //    return false;
         
         // when not visited and not in recursion stack:
         visited[course] = true;
