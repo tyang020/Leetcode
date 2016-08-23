@@ -7,7 +7,7 @@ public class Solution {
             for (int j = i+1; Math.max(i, j-i) <= num.length() - j; j++) {
                 if (num.charAt(i) == '0' && j-i > 1) break;
                 BigInteger x2 = new BigInteger(num.substring(i, j));
-                if (isValid(x1, x2, int j, num))
+                if (isValid(x1, x2, j, num))
                     return true;
             }
         }
