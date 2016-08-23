@@ -7,21 +7,18 @@ public class Solution {
             for (int j = i+1; Math.max(i, j-i) <= num.length() - j; j++) {
                 if (num.charAt(i) == '0' && j-i > 1) break;
                 BigInteger x2 = new BigInteger(num.substring(i, j));
-                if (isValid(x1, x2, num.substring(j)))
+                if (isValid(x1, x2, int j, num))
                     return true;
             }
         }
         return false;
     }
     
-    private boolean isValid(BigInteger x1, BigInteger x2, String num) {
+    private boolean isValid(BigInteger x1, BigInteger x2, int start, String num) {
+        if (start == num.length) return true;
         x2 = x2.add(x1);
         x1 = x2.subtract(x1);
         String sum = x2.toString();
-        if (sum.equals(num))
-            return true;
-        if (sum.length() >= num.length() || !num.startsWith(sum))
-            return false;
-        return isValid(x1, x2, num.substring(sum.length()));
+        return num.startsWith(sum, start) && isValid(x1, x2, start + sum.length(), num);
     }
 }
