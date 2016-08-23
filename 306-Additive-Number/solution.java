@@ -15,7 +15,7 @@ public class Solution {
     }
     
     private boolean isValid(BigInteger x1, BigInteger x2, int start, String num) {
-        if (start == num.length) return true;
+        if (start == num.length()) return true;
         x2 = x2.add(x1);
         x1 = x2.subtract(x1);
         String sum = x2.toString();
