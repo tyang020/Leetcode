@@ -1,6 +1,6 @@
 public class Solution {
     public int calculate(String s) {
-        s.replaceAll("\\s+", ""); // \\s the regexp of whitespace, '+' means one or more.
+        s.replaceAll("\\s+", ""); // '\\s' the regexp of whitespace, '+' means one or more.
         int len = s.length();
         int res = 0;
         long sub = 0;
@@ -9,7 +9,7 @@ public class Solution {
         while (i < len) {
             long num = 0;
             while (i < len && Character.isDigit(s.charAt(i))) {
-                num = num*10 + s.charAt(i) - '0';
+                num = num*10 + (s.charAt(i) - '0');
                 i++;
             }
             // When encounter '+' or '-' add sub to res;
