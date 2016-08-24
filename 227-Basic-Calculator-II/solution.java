@@ -26,8 +26,6 @@ public class Solution {
                 sub /= num;
             }
             if (i < len) {
-                while (s.charAt(i) == ' ')
-                    i++;
                 sign = s.charAt(i);
                 i++;
             }
