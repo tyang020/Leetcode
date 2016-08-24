@@ -1,6 +1,6 @@
 public class Solution {
     public int calculate(String s) {
-        s.replaceAll(" +", ""); // '\\s' the regexp of whitespace, '+' means one or more.
+        s = s.replaceAll("\\s+", ""); // '\\s' the regexp of whitespace, '+' means one or more.
         int len = s.length();
         int res = 0;
         long sub = 0;
