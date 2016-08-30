@@ -3,12 +3,12 @@ public class Solution {
         int[] numOfPres = new int[numCourses];
         int[] order = new int[numCourses];
         // - Adjacency list, we don't have to modify once initialize it
-        List<List<Integer>> adj = new ArrayList(numCourses);
+        List<Integer>[] adj = new ArrayList[numCourses];
         for (int i = 0; i < numCourses; i++) 
-            adj.add(new ArrayList());
+            adj[i] = new ArrayList();
         for (int[] edge : prerequisites) {
             numOfPres[edge[0]]++;
-            adj.get(edge[1]).add(edge[0]);
+            adj[edge[1]].add(edge[0]);
         }
         // Add all the courses which have no pres into queue
         Queue<Integer> queue = new LinkedList<Integer>();
@@ -20,7 +20,7 @@ public class Solution {
         while (!queue.isEmpty()) {
             int curPre = queue.poll();
             order[visited++] = curPre;
-            for (int i : adj.get(curPre)) {
+            for (int i : adj[curPre]) {
                 if (--numOfPres[i] == 0)
                     queue.offer(i);
             }
