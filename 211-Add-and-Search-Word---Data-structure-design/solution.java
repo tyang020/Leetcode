@@ -3,6 +3,7 @@ public class WordDictionary {
         public char val;
         public boolean isWord;
         public TrieNode child[] = new TrieNode[26];
+        public TrieNode() {}
         public TrieNode (char c) {
             val = c;
         }
