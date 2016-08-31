@@ -7,10 +7,9 @@ public class WordDictionary {
             val = c;
         }
     }
-    public TrieNode root;
+    public TrieNode root = new TrieNode();
     
     public WordDictionary () {
-        root = new TrieNode();
         root.val = ' ';
         root.isWord = false;
     }
