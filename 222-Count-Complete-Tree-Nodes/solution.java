@@ -19,7 +19,7 @@ public class Solution {
                 count += 1 << (h-1); //# of node in right tree plus one root
                 p = p.left;
             }
-            h--
+            h--;
         }
         return count;
     }
