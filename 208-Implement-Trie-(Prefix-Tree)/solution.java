@@ -22,7 +22,7 @@ public class Trie {
         TrieNode p = root;
         for (char c : word.toCharArray()) {
             if(p.children[c-'a'] == null)
-                p.children[c-'a'] == new TrieNode(c);
+                p.children[c-'a'] = new TrieNode(c);
             p = p.children[c-'a'];
         }
         p.isWord = true;
