@@ -35,7 +35,7 @@ public class WordDictionary {
     public boolean match(char[] chs, int pos, TrieNode node) {
         if (pos == chs.length) return node.isWord;
         if (chs[pos] != '.')
-            return node.child[chs[pos]-'a']!=null && match(chs, pos+1, node.child[chs[pos]-'a'])
+            return node.child[chs[pos]-'a']!=null && match(chs, pos+1, node.child[chs[pos]-'a']);
         
         for (int i = 0; i < 26; i++) {
             if (node.child[i] == null)
