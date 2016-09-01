@@ -14,7 +14,7 @@ public class Solution {
                 for (int k = j + 1; k - j <= 3 && k < len; k++) {
                     String s3 = s.substring(j, k), s4 = s.substring(k);
                     if (!isValid(s3)) break;
-                    if (!isValid(s4)) continue;
+                    if (len - k > 3 || !isValid(s4)) continue;
                     res.add(s1+"."+s2+"."+s3+"."+s4);
                 }
             }
