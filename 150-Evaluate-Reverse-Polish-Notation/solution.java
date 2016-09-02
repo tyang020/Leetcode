@@ -15,7 +15,7 @@ public class Solution {
                 int b = stack.pop();
                 stack.push(b/a);
             } else 
-                stack.push(Integer.parseInt(s));
+                stack.push(Integer.parseInt(s)); // parseInt is much faster than valueOf
         }
         return stack.pop();
     }
